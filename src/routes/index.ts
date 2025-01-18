@@ -1,7 +1,11 @@
-import { Router } from 'express';
-import useragent from 'express-useragent';
+import { Router } from 'express'
+import useragent from 'express-useragent'
 
-const rotas = Router();
-rotas.use(useragent.express());
+import produtos from './produtos.routes'
 
-export default rotas;
+const rotas = Router()
+rotas.use(useragent.express())
+
+rotas.use('/produtos', produtos)
+
+export default rotas

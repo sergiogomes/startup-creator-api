@@ -5,7 +5,7 @@ import authConfig from './utils/authConfig';
 const freeAccess = (originalUrl: string) => {
 
   switch (originalUrl) {
-    case '#':
+    case '/produtos':
       return true;
     default:
       return false;

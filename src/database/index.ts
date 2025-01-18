@@ -1,8 +1,10 @@
-import { createConnection } from 'typeorm';
+import { createConnection } from 'typeorm'
 
-require('dotenv').config();
+import Produtos from '../models/Produtos'
 
-const { DB_NAME, DB_PASS, DB_HOST, DB_USER } = process.env; 
+require('dotenv').config()
+
+const { DB_NAME, DB_PASS, DB_HOST, DB_USER } = process.env 
 
 createConnection({
     type: 'mysql',
@@ -12,6 +14,8 @@ createConnection({
     password: DB_PASS,
     database: DB_NAME,
     logging: ['query', 'error'],
-    entities: [],
-  });
+    entities: [
+      Produtos
+    ],
+  })
   

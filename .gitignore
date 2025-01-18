@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pyo
+.Python
+.env
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Dependencies
+/vendor/
+
+# Environment variables
+.env
+
+# Build files
+*.swp
+*.bak
+*.tmp
+*.old
+*.out
+*.obj
+*.exe
+*.dll
+*.o
+*.so
