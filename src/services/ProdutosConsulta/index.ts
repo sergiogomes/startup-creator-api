@@ -3,12 +3,10 @@ import { getRepository } from 'typeorm'
 
 import TabelaProdutos from '../../models/Produtos'
 
-const ProdutosCadastro = async (request: Request, response: Response): Promise<Response> => {
+const ProdutosConsulta = async (request: Request, response: Response): Promise<Response> => {
   try {
     const connextion = getRepository(TabelaProdutos)
-    const { body } = request
-
-    const result = await connextion.insert(body)
+    const result = await connextion.find()
 
     return response.json(result)
   } catch (err) {
@@ -16,4 +14,4 @@ const ProdutosCadastro = async (request: Request, response: Response): Promise<R
   } 
 }
 
-export default ProdutosCadastro
+export default ProdutosConsulta

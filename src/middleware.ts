@@ -4,6 +4,12 @@ import authConfig from './utils/authConfig';
 
 const freeAccess = (originalUrl: string) => {
 
+  const urlProdutos = originalUrl.includes('produtos') ? originalUrl : false
+
+  if (urlProdutos) {
+    return true
+  }
+
   switch (originalUrl) {
     case '/produtos':
       return true;
