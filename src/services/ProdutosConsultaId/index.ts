@@ -14,7 +14,7 @@ const ProdutosConsultaId = async (request: Request, response: Response): Promise
       }
     })
 
-    return response.json(result)
+    return response.json(...result)
   } catch (err) {
     return response.status(400).json(err)
   } 
